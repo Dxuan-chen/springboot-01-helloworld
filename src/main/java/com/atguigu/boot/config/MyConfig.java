@@ -1,9 +1,11 @@
 package com.atguigu.boot.config;
 
 import ch.qos.logback.core.db.DBHelper;
+import com.atguigu.boot.bean.Car;
 import com.atguigu.boot.bean.Pet;
 import com.atguigu.boot.bean.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -26,6 +28,9 @@ import org.springframework.context.annotation.ImportResource;
 //@ConditionalOnBean(name = "tom")
 @ConditionalOnMissingBean(name = "tom")
 @ImportResource("classpath:beans.xml")
+@EnableConfigurationProperties(Car.class)
+//1、开启Car配置绑定功能
+//2、把这个Car组件自动注册到容器中
 public class MyConfig {
 
     /**
