@@ -36,6 +36,9 @@ public class MainApplication {
             System.out.println(name);
         }
 
+        int beanDefinitionCount = run.getBeanDefinitionCount();
+        System.out.println(beanDefinitionCount);
+
         //3.从容器中获取组件
 /*        Pet tom01 = run.getBean("tom", Pet.class);
         Pet tom02 = run.getBean("tom",Pet.class);
@@ -74,5 +77,6 @@ public class MainApplication {
 
         boolean haha = run.containsBean("haha");
         System.out.println("haha:"+haha);
+
     }
 }
