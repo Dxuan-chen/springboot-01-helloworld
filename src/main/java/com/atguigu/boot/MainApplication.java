@@ -13,6 +13,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Conditional;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 /**
@@ -24,6 +26,8 @@ import org.springframework.context.annotation.Conditional;
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @ComponentScan("com.atguigu.boot")
+//@EnableScheduling
+@EnableAsync
 public class MainApplication {
 
     public static void main(String[] args) {
